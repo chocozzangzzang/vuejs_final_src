@@ -1,19 +1,12 @@
 <template>
-	<div>
-		header
-		<demo-vue></demo-vue>
-	</div>
+	<header>
+		<router-link to="/login">로그인</router-link> |
+		<router-link to="/signup">회원가입</router-link>
+	</header>
 </template>
 
 <script>
-// import DemoVue from "../../demo/basic/DemoVue.vue";
-import DemoVue from "@/demo/basic/DemoVue.vue";
-
-export default {
-	components: {
-		DemoVue,
-	},
-};
+export default {};
 </script>
 
 <style></style>
