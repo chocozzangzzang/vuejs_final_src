@@ -1,7 +1,7 @@
 <template>
 	<div class="contents">
 		<div class="form-wrapper form-wrapper-sm">
-			<form @submit.prevent="submitForm">
+			<form @submit.prevent="submitForm" class="form">
 				<div>
 					<label for="username">ID : </label>
 					<input id="username" type="text" v-model="username" />
@@ -55,9 +55,10 @@ export default {
 				};
 				const { data } = await loginUser(loginData);
 				// 메인 페이지로 이동 //
-				console.log(data.user.username);
+				console.log(data.token);
+				this.$store.commit("setToken", data.token);
 				this.$store.commit("setUsername", data.user.username);
-				this.logMessage = `${data.user.username} 님 환영합니다.`;
+				// this.logMessage = `${data.user.username} 님 환영합니다.`;
 				this.$router.push("/main");
 				// < router-link to="" > //
 				// this.initForm();
