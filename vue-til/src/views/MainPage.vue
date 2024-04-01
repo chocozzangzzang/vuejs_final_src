@@ -17,11 +17,14 @@
 				</li> -->
 			</ul>
 		</div>
+		<router-link to="/add" class="create-button">
+			<i class="ion-md-add"></i>
+		</router-link>
 	</div>
 </template>
 
 <script>
-import { fetchPosts } from "@/api/index.js";
+import { fetchPosts } from "@/api/posts.js";
 import PostListItem from "@/components/posts/PostListItem.vue";
 import LoadingSpinner from "@/components/common/LoadingSpinner.vue";
 
