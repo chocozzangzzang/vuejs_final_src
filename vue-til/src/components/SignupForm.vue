@@ -1,7 +1,7 @@
 <template>
 	<div class="contents">
 		<div class="form-wrapper form-wrapper-sm">
-			<form @submit.prevent="submitForm">
+			<form @submit.prevent="submitForm" class="form">
 				<div>
 					<label for="username">ID : </label>
 					<input id="username" type="text" v-model="username" />
@@ -18,6 +18,7 @@
 					type="submit"
 					:disabled="!isEmailValid || !password || !nickname"
 					class="btn"
+					:class="!isEmailValid || !password || !nickname ? 'disabled' : null"
 				>
 					회원가입
 				</button>

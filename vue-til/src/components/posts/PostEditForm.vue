@@ -54,7 +54,7 @@ export default {
 	async created() {
 		const postId = this.$route.params.id;
 		const { data } = await fetchPost(postId);
-		console.log(data);
+		// console.log(data);
 		this.title = data.title;
 		this.contents = data.contents;
 	},
